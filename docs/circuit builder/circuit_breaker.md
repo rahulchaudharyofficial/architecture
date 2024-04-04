@@ -26,4 +26,8 @@ The proxy can be implemented as a state machine with following states that mimic
     out or fail again.
 
 
+## Interaction
+![Interaction](./img1.png "circuit breaker interaction")
+
+
 ### Author - Rahul Chaudhary
