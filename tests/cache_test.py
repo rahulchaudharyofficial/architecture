@@ -1,4 +1,4 @@
-from cache.db import UserService
+from src.cache.db import UserService
 from random import choice
 
 

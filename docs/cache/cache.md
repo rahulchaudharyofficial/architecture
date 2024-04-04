@@ -1,4 +1,4 @@
-# $${\color{lightblue}Caching \space pattern}$$
+# <center style="color: lightblue;">Cache</center>
 
 Load data on demand into a cache from a data store. This pattern can improve performance and also helps to
 maintain consistency between data held in the cache and the data in the underlying data store.

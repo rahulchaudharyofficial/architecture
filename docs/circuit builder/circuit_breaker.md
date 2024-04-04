@@ -1,4 +1,4 @@
-# $${\color{lightblue}Circuit \space Breaker}$$
+# <center style="color: lightblue;">Circuit Breaker</center>
 ## Introduction
 Handle faults that may take a variable amount of time to rectify when connecting to a remote service or resource. This pattern can improve the stability and resiliency of an application.
 ## Context & Problem
