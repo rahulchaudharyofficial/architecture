@@ -15,5 +15,15 @@ The proxy maintains a count of the number of recent failures, and if the call to
 this timer expires the proxy is placed into the Half-Open state.
 
 The proxy can be implemented as a state machine with following states that mimic the functionality of an electrical circuit breaker:
-- Closed:
+- Closed: *When circuit breaker proxy is in closed state, request is routed to handler*
+- Open: *When circuit breaker proxy is in open state, request is failed immediately.*
+- Half open: *A limited # of requests are allowed to pass through and invoke operation. if these requests are successful then it is assumed fault which was causing failures earlier is fixed and circuit goes back to closed state (failure counter is reset). if request fails then circuit is put to Open state and timer restarts.*
+
+### *Note*
+    The Half-Open state is useful to prevent a recovering service from suddenly being inundated with
+    requests. As a service recovers, it may be able to support a limited volume of requests until the
+    recovery is complete, but while recovery is in progress a flood of work may cause the service to time
+    out or fail again.
+
+
 ### Author - Rahul Chaudhary
